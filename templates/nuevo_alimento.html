@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nuevo Alimento</title>
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
+</head>
+<body>
+	<div class="panel panel-primary"> 
+		<div class=panel-heading> 
+			<h3 class=panel-title>Nuevo Alimento</h3> 
+		</div> 
+		<div class=panel-body> 
+			<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button class="btn btn-default" type="submit">Guardar</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

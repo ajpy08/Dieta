@@ -1,0 +1,9 @@
+from django.conf.urls import url
+from . import views
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+	url(r'^$', views.ListaAlimentos.as_view(), name = 'hello'),
+ 	url(r'^alimento/(?P<pk>[0-9]+)/$', views.DetalleAlimento.as_view(), name='detalle'),
+    url(r'^alimento/nuevo', views.nuevo_alimento, name="nuevo")
+]

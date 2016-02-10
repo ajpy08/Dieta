@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="es-mx">
+<head>
+	{% load staticfiles %}
+	<meta charset = "UTF-8">
+	<title>Hello World</title>
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<h1 style="color:black">
+	Hola
+</h1>
+<div>
+	<a class="btn btn-default btn-primary" href="{% url "alimentos:nuevo" %}">Nuevo Alimento</a>
+</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" align="center">Menu de Alimentos</h3>
+		</div>
+			<!-- <div class="panel-body">
+	    		<p>
+	    			Estos son todos los alimentos que podras utilizar para tu dieta!
+
+	    			Javi
+	    		</p>
+	  		</div> -->
+			<table class="table" >
+		  		<tr>
+			  		<th>Alimento</th>
+			  		<th>Porcion</th>
+		  		</tr>
+				{% for a in object_list %}
+				<tr>
+					<td><a href="{% url "alimentos:detalle" a.id %}"> {{ a.nombre }} </a></td>
+					<td> {{ a.porcion }} </td>
+				</tr>
+				{% endfor %}
+		  </table>
+		</div>
+	</div>
+</body>
+</html>
