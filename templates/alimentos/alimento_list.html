@@ -8,37 +8,63 @@
  	<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
 	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 </head>
-<body>
-<h1 style="color:black">
-	Hola
-</h1>
-<div>
-	<a class="btn btn-default btn-primary" href="{% url "alimentos:nuevo" %}">Nuevo Alimento</a>
-</div>
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title" align="center">Menu de Alimentos</h3>
-		</div>
-			<!-- <div class="panel-body">
-	    		<p>
-	    			Estos son todos los alimentos que podras utilizar para tu dieta!
+<body>	
+	<div class="container">
+	<div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Alimentos</a></li>
+            <li role="presentation"><a href="#">Menu</a></li>
+            <li role="presentation"><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <h2 class="text-muted glyphicon glyphicon-scale"> Dieta</h2>
+      </div>
+      	<p>Hola: Javi
+        <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-log-in"></span> Log out
+        </button>
+      	</p>
+      	<ul class="nav nav-pills" role="tablist">
+		  <li role="presentation"><a href="{% url "alimentos:nuevo" %}">Nuevo Alimento</a></li>
+		  <!-- <li role="presentation"><a href="#">Profile</a></li>
+		  <li role="presentation"><a href="#">Messages</a></li> -->
+		</ul>
 
-	    			Javi
-	    		</p>
-	  		</div> -->
-			<table class="table" >
+	<div class="panel panel-default">		
+		<div class="panel-heading">
+			<h2 class="panel-title" align="center">Menu de Alimentos</h2>
+		</div>
+			<div class="panel-body">
+  				<h4>Estos alimentos serán tus aliados para tu dieta:</h4>
+	  				<span class="label label-success">1. Fruta</span>
+	  				<span class="label label-success">2. Huevos</span>
+	  				<span class="label label-success">3. Verduras</span>
+	  				<span class="label label-success">4. Pollo o pavo</span>
+	  				<span class="label label-success">5. Patatas</span>
+	  				<span class="label label-success">6. Yogurt natural</span>
+	  				<span class="label label-success">7. Pescados magros</span>
+	  				<span class="label label-success">8. Tofu</span>
+	  				<span class="label label-success">9. Ensaladas</span>
+	  				<span class="label label-success">10. Espárragos</span>
+	  				<span class="label label-info">Truco extra: el bendito agua</span>
+	  		</div>
+			<table class="table">
 		  		<tr>
 			  		<th>Alimento</th>
 			  		<th>Porcion</th>
+			  		<th>Tipo</th>
 		  		</tr>
 				{% for a in object_list %}
 				<tr>
 					<td><a href="{% url "alimentos:detalle" a.id %}"> {{ a.nombre }} </a></td>
 					<td> {{ a.porcion }} </td>
+					<td> {{ a.tipo }} </td>
 				</tr>
 				{% endfor %}
 		  </table>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

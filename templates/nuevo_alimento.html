@@ -6,16 +6,24 @@
  	<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
 </head>
 <body>
-	<div class="panel panel-primary"> 
-		<div class=panel-heading> 
-			<h3 class=panel-title>Nuevo Alimento</h3> 
-		</div> 
-		<div class=panel-body> 
-			<form method="POST" enctype="multipart/form-data">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<button class="btn btn-default" type="submit">Guardar</button>
-		</form>
+	<div class="container">
+		<nav>
+		  <ul class="pager">
+		    <li class="previous"><a href="/"><span aria-hidden="true">&larr;</span> Atras</a></li>
+		    <!-- <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li> -->
+		  </ul>
+		</nav>
+		<div class="panel panel-primary"> 
+			<div class=panel-heading> 
+				<h3 class=panel-title>Nuevo Alimento</h3> 
+			</div> 
+			<div class=panel-body> 
+				<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button class="btn btn-default" type="submit">Guardar</button>
+			</form>
+			</div>
 		</div>
 	</div>
 </body>

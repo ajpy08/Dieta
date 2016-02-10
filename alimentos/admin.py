@@ -8,5 +8,5 @@ class AdminAlimento(admin.ModelAdmin):
 
 @admin.register(Alimento_Tipo)
 class AdminAlimento_Tipo(admin.ModelAdmin):
-	list_display = ('alimento',)
+	list_display = ('alimento', 'tipo',)
 	list_filter = ('tipo',)

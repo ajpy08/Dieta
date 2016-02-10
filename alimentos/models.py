@@ -13,12 +13,12 @@ class Alimento(models.Model):
 		ordering = ('id',)	
 
 class Alimento_Tipo(models.Model):
-	tipo = models.ForeignKey(TipoAlimento)
 	alimento = models.ForeignKey(Alimento)
+	tipo = models.ForeignKey(TipoAlimento)	
 
 	class Meta:
 		verbose_name = 'TiposAlimentos'
 		verbose_name_plural = 'TiposAlimentos'
 
 	def __str__(self):
-		return '%s %s' % (self.tipo.tipo, self.alimento.nombre)
+		return '%s %s' % (self.alimento.nombre, self.tipo.tipo )
