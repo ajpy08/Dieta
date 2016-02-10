@@ -7,15 +7,27 @@
  	<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" />
 	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 </head>
-<body>
-	<h1> {{ alimento.nombre }} </h1>
-	<h2> {{ alimento.porcion }} </h2>
+<body>		
+	<div class="panel-heading">
+		<nav>
+		  <ul class="pager">
+		    <li class="previous"><a href="/"><span aria-hidden="true">&larr;</span> Atras</a></li>
+		    <!-- <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li> -->
+		  </ul>
+		</nav>		
 
-<!-- 	<p>
-		{{ alimento.category }}
-		{{ alimento.price }}
-	</p> -->
-
-	<img src="{{ alimento.image.url }}">
+		<div class="row" align="center">
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="{{ alimento.image.url }}">
+		      <div class="caption">
+		        <h3>{{ alimento.nombre }}</h3>
+		        <p>{{ alimento.porcion }}</p>	
+		        <p>{{ alimento.descripcion }}</p>        
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
 </body>
 </html>

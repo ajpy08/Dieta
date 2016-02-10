@@ -3,7 +3,7 @@ from .models import Alimento, Alimento_Tipo
 
 @admin.register(Alimento)
 class AdminAlimento(admin.ModelAdmin):
-    list_display = ('nombre', 'porcion',)
+    list_display = ('nombre', 'porcion', 'descripcion', 'image',)
     list_filter = ('nombre',)
 
 @admin.register(Alimento_Tipo)

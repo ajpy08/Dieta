@@ -5,6 +5,8 @@ from tiposalimento.models import TipoAlimento
 class Alimento(models.Model):
 	nombre = models.CharField(max_length=255)
 	porcion = models.CharField(max_length=255)
+	descripcion = models.CharField(max_length=255)
+	image = models.ImageField(blank=True)
 
 	def __str__(self):
 		return self.nombre

@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tiposalimento.apps.TiposalimentoConfig',
     'alimentos.apps.AlimentosConfig',
+    'tiposalimento.apps.TiposalimentoConfig',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,3 +127,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
