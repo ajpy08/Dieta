@@ -9,7 +9,7 @@ class Alimento(models.Model):
 	image = models.ImageField(blank=True)
 
 	def __str__(self):
-		return self.nombre
+		return '%s %s %s %s' % (self.nombre, self.porcion, self.descripcion, self.image )
 
 	class Meta:
 		ordering = ('id',)	
@@ -23,4 +23,4 @@ class Alimento_Tipo(models.Model):
 		verbose_name_plural = 'TiposAlimentos'
 
 	def __str__(self):
-		return '%s %s' % (self.alimento.nombre, self.tipo.tipo )
+		return '%s %s %s %s %s' % (self.alimento.nombre, self.porcion, self.descripcion, self.image, self.tipo.tipo )

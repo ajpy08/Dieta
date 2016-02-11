@@ -19,12 +19,20 @@
 	          </ul>
 	        </nav>
         	<h2 class="text-muted glyphicon glyphicon-scale"> Dieta</h2>
-      	</div>
-      	<p>Hola: Javi
-        <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-log-in"></span> Log out
-        </button>
-      	</p>
+      	</div>  
+      		<div align="right">      
+        	 
+			{% if user.is_authenticated %}
+				<h3 class="text-muted">Hi {{ user.username }}</h3>
+				<span class="glyphicon glyphicon-log-in">
+					<a href="{% url "alimentos:logout" %}" class="btn btn-info" role="button">Logout</a>
+				</span>
+			{% else %}
+				<span class="glyphicon glyphicon-log-out">
+					<a href="{% url "alimentos:authentication" %}" class="btn btn-info" role="button">Login</a>
+				</span>
+			{% endif %}
+			</div>
       	<ul class="nav nav-pills" role="tablist">
 		  <li role="presentation"><a href="{% url "alimentos:nuevo" %}">Nuevo Alimento</a></li>
 		  <!-- <li role="presentation"><a href="#">Profile</a></li>
@@ -36,18 +44,19 @@
 				<h2 class="panel-title" align="center">Menu de Alimentos</h2>
 			</div>
 				<div class="panel-body">
-	  				<h4>Estos alimentos serán tus aliados para tu dieta:</h4>
+	  				<h4>Estos alimentos serán tus aliados para tu dieta:
 		  				<span class="label label-success">1. Fruta</span>
 		  				<span class="label label-success">2. Huevos</span>
-		  				<span class="label label-success">3. Verduras</span>
+		  				<span class="label label-success">3. Verduras</span></br></br>
 		  				<span class="label label-success">4. Pollo o pavo</span>
 		  				<span class="label label-success">5. Patatas</span>
 		  				<span class="label label-success">6. Yogurt natural</span>
 		  				<span class="label label-success">7. Pescados magros</span>
 		  				<span class="label label-success">8. Tofu</span>
-		  				<span class="label label-success">9. Ensaladas</span>
+		  				<span class="label label-success">9. Ensaladas</span></br></br>
 		  				<span class="label label-success">10. Espárragos</span>
 		  				<span class="label label-info">Truco extra: el bendito agua</span>
+		  			</h4>
 		  		</div>
 				<table class="table">
 			  		<tr>
@@ -58,10 +67,10 @@
 				  		<th>Imagen</th>
 			  		</tr>
 					{% for a in object_list %}
-					<tr>
+					<tr>								
 						<td><a href="{% url "alimentos:detalle" a.id %}"> {{ a.nombre }} </a></td>
 						<td> {{ a.porcion }} </td>
-						<td> {{ a.tipo }} </td>
+						<td> {{ a.tipo }} </td> 
 						<td> {{ a.descripcion|truncatewords:"10" }} </td>
 						<td> {{ a.image }} </td>
 					</tr>
