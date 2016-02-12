@@ -9,7 +9,8 @@ class Alimento(models.Model):
 	image = models.ImageField(blank=True)
 
 	def __str__(self):
-		return '%s %s %s %s' % (self.nombre, self.porcion, self.descripcion, self.image )
+		return self.nombre
+		# return '%s %s %s %s' % (self.nombre, self.porcion, self.descripcion, self.image )
 
 	class Meta:
 		ordering = ('id',)	
