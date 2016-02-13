@@ -31,14 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'alimentos.apps.AlimentosConfig',
-    'tiposalimento.apps.TiposalimentoConfig',    
+    'material',
+    # 'material.frontend',
+    'material.admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'alimentos.apps.AlimentosConfig',
+    'tiposalimento.apps.TiposalimentoConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
