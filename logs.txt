@@ -1,0 +1,65 @@
+commit 08fbe57cb1ced514f0b5d1d048149830d5528dc2
+Author: Angel Javier Puc Yamá <angelpuc08@gmail.com>
+Date:   Wed Feb 17 17:04:56 2016 -0500
+
+    Primer commit en Digital Ocean
+
+commit 5bba7df378209215b32d7d4101ebda3d65fe25b5
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Tue Feb 16 17:32:42 2016 -0600
+
+    Se agrego el .gitignore y el requirements.txt
+
+commit 2d655a437d24a85c738fe140b501f9abc2661173
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Sat Feb 13 12:49:57 2016 -0600
+
+    Se agrego el admin-material
+
+commit bd3ecccc3564908d1e051b9940b511178f73c165
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Fri Feb 12 09:09:52 2016 -0600
+
+    Se modifico el modelo Alimentos para que retorne solo el nombre y se modifico la tabla donde despliega el listview de alimentos
+
+commit 465b915b08f4070782db3e8af3f1a3457c8cdf39
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Thu Feb 11 18:01:28 2016 -0600
+
+    Se elimino el css de nuevo_alimento y se modifico el name de la ruta hello a home
+
+commit c27af02f7defbb57b076db30dcd81dc9f1dae77b
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Thu Feb 11 17:55:26 2016 -0600
+
+    Login Listo!
+
+commit c6d828d35a81cdbb6d8301c7ccc0c54ef4d1ee23
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Thu Feb 11 17:54:51 2016 -0600
+
+    Se modifico con bootstrap y creo login
+
+commit 1f1cb42d58e0b7e9922d6fe461d72b5fb1682bcd
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Wed Feb 10 17:59:20 2016 -0600
+
+    Se agrego imagenes a cada alimento y se le puso bootstrap al detalle de alimento
+
+commit db87060941e9255264a447de536ccb9fa5699f2d
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Wed Feb 10 15:10:35 2016 -0600
+
+    Se Modifico con Bootstrap la lista de alimentos
+
+commit 096a2781dc01b804c27b8dec72b2c289af6d661f
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Tue Feb 9 18:05:58 2016 -0600
+
+    Agregue gitignore
+
+commit c9521e9d8bdc6cd352b216bd206cf85a283ab991
+Author: I.S.C. Javi Puc <angelpuc08@gmail.com>
+Date:   Tue Feb 9 18:03:32 2016 -0600
+
+    Commit Inicial
